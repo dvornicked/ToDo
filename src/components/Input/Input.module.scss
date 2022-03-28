@@ -1,0 +1,32 @@
+.input-box {
+  display: flex;
+  justify-content: space-between;
+}
+
+.input {
+  font-size: 1.5rem;
+  flex-grow: 1;
+  border: 1px gray solid;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+.button {
+  background: none;
+  border: 1px gray solid;
+  border-radius: 5px;
+  margin-left: 10px;
+  cursor: pointer;
+
+  svg {
+    margin-top: 2px;
+  }
+
+  &:hover {
+    background: #20c997;
+    
+    svg {
+      fill: white;
+    }
+  }
+}

@@ -1,0 +1,51 @@
+@use "sass:color";
+
+.list-item {
+  margin: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.text {
+  font-size: 1.5rem;
+  border-bottom: 1px steelblue dashed;
+  flex-grow: 1;
+  cursor: pointer;
+}
+
+.important {
+  font-weight: bold;
+}
+
+.done {
+  text-decoration: line-through;
+}
+
+.button {
+  background: none;
+  border: 1px gray solid;
+  border-radius: 5px;
+  margin-left: 10px;
+  cursor: pointer;
+
+  svg {
+    margin-top: 2px;
+  }
+
+  &.toggled, &.exclamation:hover {
+    background: color.adjust(steelblue, $lightness: 10%);
+
+    svg {
+      fill: white;
+    }
+  }
+
+  &.trash:hover {
+    background: color.adjust(red, $lightness: 20%);
+
+    svg {
+      fill: white;
+    }
+  }
+}
