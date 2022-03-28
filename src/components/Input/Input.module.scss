@@ -17,6 +17,7 @@
   border-radius: 5px;
   margin-left: 10px;
   cursor: pointer;
+  transition: 0.3s;
 
   svg {
     margin-top: 2px;
@@ -24,7 +25,7 @@
 
   &:hover {
     background: #20c997;
-    
+
     svg {
       fill: white;
     }

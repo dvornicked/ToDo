@@ -7,6 +7,7 @@ Object {
     <div>
       <li
         class="list-item"
+        style="opacity: 0;"
       >
         <span
           class="text"
@@ -38,6 +39,7 @@ Object {
   "container": <div>
     <li
       class="list-item"
+      style="opacity: 0;"
     >
       <span
         class="text"

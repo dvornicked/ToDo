@@ -1,3 +1,4 @@
+import { AnimatePresence } from 'framer-motion'
 import { useEffect, useState } from 'react'
 import Input from '../Input'
 import List from '../List'
@@ -50,8 +51,10 @@ function App() {
   return (
     <div className={styles.app}>
       <h1 className={styles.title}>ToDo</h1>
-      <List tasks={state} funcTask={funcTask} />
-      <Input addTask={addTask} className={styles.input} />
+      <AnimatePresence>
+        <List key="List" tasks={state} funcTask={funcTask} />
+        <Input key="Input" addTask={addTask} className={styles.input} />
+      </AnimatePresence>
     </div>
   )
 }

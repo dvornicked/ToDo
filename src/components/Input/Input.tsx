@@ -1,4 +1,5 @@
 import cn from 'classnames'
+import { motion } from 'framer-motion'
 import { ChangeEvent, KeyboardEvent, useState } from 'react'
 import styles from './Input.module.scss'
 import { InputProps } from './Input.props'
@@ -7,7 +8,7 @@ import { ReactComponent as Plus } from './plus.svg'
 function Input({ addTask, className, ...props }: InputProps) {
   const [state, setState] = useState<string>('')
   return (
-    <div className={cn(styles['input-box'], className)} {...props}>
+    <motion.div layout className={cn(styles['input-box'], className)} {...props}>
       <input
         type="text"
         className={styles.input}
@@ -32,7 +33,7 @@ function Input({ addTask, className, ...props }: InputProps) {
       >
         <Plus />
       </button>
-    </div>
+    </motion.div>
   )
 }
 

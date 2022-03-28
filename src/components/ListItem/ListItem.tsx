@@ -1,5 +1,6 @@
 /* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
 import cn from 'classnames'
+import { motion } from 'framer-motion'
 import { ListItemProps } from './ListItem.props'
 import styles from './ListItem.module.scss'
 import { ReactComponent as Trash } from './trash.svg'
@@ -14,7 +15,13 @@ function ListItem({
 }: ListItemProps) {
   const handleKeyDown = () => {}
   return (
-    <li className={cn(styles['list-item'], className)} {...props}>
+    <motion.li
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      className={cn(styles['list-item'], className)}
+      {...props}
+    >
       <span
         className={cn(styles.text, {
           [styles.important]: important,
@@ -46,7 +53,7 @@ function ListItem({
       >
         <Trash />
       </button>
-    </li>
+    </motion.li>
   )
 }
 

@@ -1,4 +1,4 @@
-import { HTMLAttributes } from 'react'
+import { DetailedHTMLProps, HTMLAttributes } from 'react'
 
 export interface IFuncTask {
   deleteTask(idx: number): void
@@ -12,7 +12,10 @@ export interface ITask {
   done?: boolean
 }
 
-export interface ListItemProps extends HTMLAttributes<HTMLLIElement> {
+export interface ListItemProps extends Omit<
+DetailedHTMLProps<HTMLAttributes<HTMLLIElement>, HTMLLIElement>,
+'onAnimationStart' | 'onDragStart' | 'onDragEnd' | 'onDrag' | 'ref'
+> {
   task: ITask
   funcTask: IFuncTask
   idx: number

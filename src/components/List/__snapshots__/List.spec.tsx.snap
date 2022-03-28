@@ -10,6 +10,7 @@ Object {
       >
         <li
           class="list-item"
+          style="opacity: 0;"
         >
           <span
             class="text"
@@ -38,6 +39,7 @@ Object {
         </li>
         <li
           class="list-item"
+          style="opacity: 0;"
         >
           <span
             class="text"
@@ -73,6 +75,7 @@ Object {
     >
       <li
         class="list-item"
+        style="opacity: 0;"
       >
         <span
           class="text"
@@ -101,6 +104,7 @@ Object {
       </li>
       <li
         class="list-item"
+        style="opacity: 0;"
       >
         <span
           class="text"
